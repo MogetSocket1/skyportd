@@ -101,10 +101,6 @@ jobs:
       - name: install 
         run: rm -rf package-lock.json && npm install 
 
-        
-      - name: ngrok 
-        run: wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.zip -O ngrok.zip && unzip ngrok.zip
-      
       - name: Configure Ngrok
         run: |
           ./ngrok authtoken 2llJzM10DVvHX07PhxWkhWRZkCf_2Xnn91iksgE2WKpmVKHy5
@@ -113,10 +109,10 @@ jobs:
         run: ./ngrok tunnel --label edge=edghts_2llK7w8wrPXJjwBqfhcFQRLORTq http://localhost:3002 &
 
       - name: step1
-        run: npm run configure -- --panel http://correct-redbird-awake.ngrok-free.app --key f3dd3ca2-868a-44b7-8b07-15db7495a261
+        run: npm run configure -- --panel http://correct-redbird-awake.ngrok-free.app --key 541a3a9a-a664-43c8-863d-03f58e972f24
       
       - name: Start The Code
-        run: node index &
+        run: node index 
 
       - name: Keep Alive
         id: check_runs
