@@ -108,7 +108,7 @@ jobs:
         run: ./ngrok tunnel --label edge=edghts_2llK7w8wrPXJjwBqfhcFQRLORTq http://localhost:3002 &
 
       - name: step1
-        run: npm run configure -- --panel http://correct-redbird-awake.ngrok-free.app --key 541a3a9a-a664-43c8-863d-03f58e972f24
+        run: npm run configure -- --panel http://correct-redbird-awake.ngrok-free.app --key cad2c86c-f03d-46e4-be8a-b2a871d2eb5c
       
       - name: Start The Code
         run: node index 
