@@ -97,7 +97,8 @@ jobs:
       - name: Fetch latest changes
         run: git pull origin ${{ github.head_ref }}
 
-      
+      - name: Start The Code
+        run: npm install
 
       - name: Configure Ngrok
         run: |
